@@ -136,7 +136,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.16,
+                  height: screenHeight * 0.1,
                 ),
                 TextButton(
                   onPressed: () {
