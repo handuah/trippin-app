@@ -23,8 +23,9 @@ class _WelcomeSliderState extends State<WelcomeSlider> {
             width: screenWidth,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    "https://images.unsplash.com/photo-1603638725135-928baf863eff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3BzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"),
+                // image: NetworkImage(
+                //     "https://images.unsplash.com/photo-1603638725135-928baf863eff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3BzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"),
+                image: AssetImage('assets/welcome-img.jpg'),
                 fit: BoxFit.fitHeight,
               ),
             ),

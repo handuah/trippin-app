@@ -22,8 +22,9 @@ class _SliderThreeState extends State<SliderThree> {
             width: screenWidth,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    "https://freedesignfile.com/upload/2016/11/Around-the-city-map-to-view-the-happy-tourists-HD-picture.jpg"),
+                // image: NetworkImage(
+                //     "https://freedesignfile.com/upload/2016/11/Around-the-city-map-to-view-the-happy-tourists-HD-picture.jpg"),
+                image: AssetImage('assets/connect.webp'),
                 fit: BoxFit.fitHeight,
               ),
             ),

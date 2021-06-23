@@ -27,8 +27,9 @@ class _SliderTwoState extends State<SliderTwo> {
             width: screenWidth,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    "https://imgk.timesnownews.com/story/Dream_about_being_in_a_desert.jpg?tr=w-1200,h-900"),
+                // image: NetworkImage(
+                //     "https://imgk.timesnownews.com/story/Dream_about_being_in_a_desert.jpg?tr=w-1200,h-900"),
+                image: AssetImage('assets/explore-img.jpg'),
                 fit: BoxFit.fitHeight,
               ),
             ),

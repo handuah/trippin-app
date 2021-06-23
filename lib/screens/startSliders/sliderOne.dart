@@ -32,8 +32,9 @@ class _SliderOneState extends State<SliderOne> {
             width: screenWidth,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                    "https://www.treebo.com/blog/wp-content/uploads/2018/04/Night-Camping-in-Bangalore-.jpg"),
+                // image: NetworkImage(
+                //     "https://www.treebo.com/blog/wp-content/uploads/2018/04/Night-Camping-in-Bangalore-.jpg"),
+                image: AssetImage('assets/travel-img.jpg'),
                 fit: BoxFit.fitHeight,
               ),
             ),
