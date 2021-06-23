@@ -5,6 +5,7 @@ import 'package:trippin_app/screens/login-signup/signup.dart';
 import 'package:trippin_app/screens/startSliders/sliderOne.dart';
 import 'package:trippin_app/screens/startSliders/sliderThree.dart';
 import 'package:trippin_app/screens/startSliders/sliderTwo.dart';
+import 'package:trippin_app/screens/startSliders/welcomeSlider.dart';
 
 void main() {
   runApp(TrippinApp());
@@ -29,6 +30,7 @@ class TrippinApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/forgotPassword': (context) => ForgotPassword(),
         '/signup': (context) => SignUp(),
+        '/welcomeSlider': (context) => WelcomeSlider(),
       },
     );
   }
