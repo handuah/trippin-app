@@ -13,8 +13,8 @@ class SliderTwo extends StatefulWidget {
 class _SliderTwoState extends State<SliderTwo> {
   @override
   Widget build(BuildContext context) {
-    // Timer(Duration(seconds: 7),
-    //     () => Navigator.pushNamed(context, '/sliderThree'));
+    Timer(Duration(seconds: 7),
+        () => Navigator.pushNamed(context, '/sliderThree'));
 
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
