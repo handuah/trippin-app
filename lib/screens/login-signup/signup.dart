@@ -43,6 +43,50 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             SizedBox(
+              height: screenHeight * 0.08,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
+              child: Form(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextFormField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.person,
+                          color: HexColor("#2c2c2c"),
+                        ),
+                        hintText: 'Name',
+                        hintStyle: TextStyle(
+                          color: HexColor("#2c2c2c"),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.grey.shade200,
+                            width: 0.01,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: HexColor("#eaeaea"),
+                      ),
+                      // focusedBorder: OutlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: HexColor("#2c2c2c"),
+                      //   ),
+                      // ),
+                    ),
+                    // ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
               height: screenHeight * 0.04,
             ),
             Padding(
@@ -56,16 +100,109 @@ class _SignUpState extends State<SignUp> {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         prefixIcon: Icon(
-                          Icons.person,
+                          Icons.mail_outline,
                           color: HexColor("#2c2c2c"),
                         ),
-                        labelText: 'Name',
-                        labelStyle: TextStyle(
+                        hintText: 'Email Address',
+                        hintStyle: TextStyle(
                           color: HexColor("#2c2c2c"),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
                         ),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.grey.shade200,
+                            color: Colors.white,
+                            width: 0.01,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: HexColor("#eaeaea"),
+                      ),
+                      // focusedBorder: OutlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: HexColor("#2c2c2c"),
+                      //   ),
+                      // ),
+                    ),
+                    // ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight * 0.04,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
+              child: Form(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextFormField(
+                      obscureText: true,
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.lock_open_rounded,
+                          color: HexColor("#2c2c2c"),
+                        ),
+                        hintText: 'Password',
+                        hintStyle: TextStyle(
+                          color: HexColor("#2c2c2c"),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 0.01,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: HexColor("#eaeaea"),
+                      ),
+                      // focusedBorder: OutlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: HexColor("#2c2c2c"),
+                      //   ),
+                      // ),
+                    ),
+                    // ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight * 0.04,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
+              child: Form(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextFormField(
+                      obscureText: true,
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.lock_outline,
+                          color: HexColor("#2c2c2c"),
+                        ),
+                        hintText: 'Confirmed Password',
+                        hintStyle: TextStyle(
+                          color: HexColor("#2c2c2c"),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 0.01,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
