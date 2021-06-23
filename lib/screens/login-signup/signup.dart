@@ -231,7 +231,9 @@ class _SignUpState extends State<SignUp> {
               SizedBox(
                 width: screenWidth * 0.94,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/welcomeSlider');
+                  },
                   child: Text(
                     'REGISTER',
                     style: GoogleFonts.josefinSans(
