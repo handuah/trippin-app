@@ -19,7 +19,10 @@ class _SignUpState extends State<SignUp> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(left: screenWidth * 0.01),
+          padding: EdgeInsets.only(
+            left: screenWidth * 0.01,
+            right: screenWidth * 0.01,
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
