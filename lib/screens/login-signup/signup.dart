@@ -256,6 +256,39 @@ class _SignUpState extends State<SignUp> {
               SizedBox(
                 height: screenHeight * 0.04,
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Already have an Account?',
+                    style: GoogleFonts.josefinSans(
+                      textStyle: TextStyle(
+                        color: HexColor("#2c2c2c"),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.josefinSans(
+                        textStyle: TextStyle(
+                          color: HexColor("#0b85ff"),
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: HexColor("#ffffff"),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
