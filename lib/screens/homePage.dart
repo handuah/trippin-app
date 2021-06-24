@@ -167,6 +167,43 @@ class _MainPageState extends State<MainPage> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
+                Positioned(
+                  top: screenHeight * 0.14,
+                  left: screenWidth * 0.06,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Hotels',
+                        style: GoogleFonts.josefinSans(
+                          textStyle: TextStyle(
+                            color: HexColor("#ffffff"),
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: screenWidth * 0.02,
+                      ),
+                      CircleAvatar(
+                        maxRadius: 14.0,
+                        backgroundColor: Colors.white,
+                        child: Text(
+                          '92',
+                          style: GoogleFonts.josefinSans(
+                            textStyle: TextStyle(
+                              color: HexColor("#2c2c2c"),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ],
