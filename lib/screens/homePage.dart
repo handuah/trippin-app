@@ -15,7 +15,84 @@ class _MainPageState extends State<MainPage> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(
+            40.0,
+          ),
+          topRight: Radius.circular(
+            40.0,
+          ),
+        ),
+        child: BottomNavigationBar(
+          elevation: 4.0,
+          backgroundColor: HexColor("#F4F4F4"),
+          items: [
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.home,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.home,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+            ),
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.bookmark_outline,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.bookmark_outline,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+            ),
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.notification_important_outlined,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.notification_important_outlined,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+            ),
+            BottomNavigationBarItem(
+              // backgroundColor: Colors.red,
+              icon: Icon(
+                Icons.person,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+              label: '',
+              // title: Text('Dashboard'),
+              activeIcon: Icon(
+                Icons.person,
+                color: HexColor('#0b85ff'),
+                size: 26.0,
+              ),
+            ),
+          ],
+        ),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: screenWidth * 0.04,
