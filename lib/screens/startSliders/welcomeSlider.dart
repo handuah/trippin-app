@@ -89,7 +89,7 @@ class _WelcomeSliderState extends State<WelcomeSlider> {
                 height: screenHeight * 0.08,
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/login');
+                    Navigator.pushNamed(context, '/mainPage');
                   },
                   child: Text(
                     'TURN ON GPS',
