@@ -18,8 +18,8 @@ class _SliderOneState extends State<SliderOne> {
 
   @override
   Widget build(BuildContext context) {
-    Timer(
-        Duration(seconds: 7), () => Navigator.pushNamed(context, '/sliderTwo'));
+    // Timer(
+    //     Duration(seconds: 7), () => Navigator.pushNamed(context, '/sliderTwo'));
 
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
