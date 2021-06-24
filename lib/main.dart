@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trippin_app/screens/homePage.dart';
 import 'package:trippin_app/screens/login-signup/forgotPswd.dart';
 import 'package:trippin_app/screens/login-signup/login.dart';
 import 'package:trippin_app/screens/login-signup/signup.dart';
@@ -31,6 +32,7 @@ class TrippinApp extends StatelessWidget {
         '/forgotPassword': (context) => ForgotPassword(),
         '/signup': (context) => SignUp(),
         '/welcomeSlider': (context) => WelcomeSlider(),
+        '/mainPage': (context) => MainPage(),
       },
     );
   }
