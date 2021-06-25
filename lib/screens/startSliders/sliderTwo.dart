@@ -117,7 +117,9 @@ class _SliderTwoState extends State<SliderTwo> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
                     child: Text(
                       'Skip',
                       style: GoogleFonts.josefinSans(
