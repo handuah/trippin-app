@@ -15,170 +15,174 @@ class _MainPageState extends State<MainPage> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       extendBody: true,
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: screenWidth * 0.04,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(top: screenHeight * 0.1),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.location_pin,
-                            color: HexColor('#0b85ff'),
-                            size: 12.0,
-                          ),
-                          Text(
-                            'Taifa, Kristo Asafo',
+      body: SingleChildScrollView(
+        // controller: controller,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth * 0.04,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: screenHeight * 0.1),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.location_pin,
+                              color: HexColor('#0b85ff'),
+                              size: 12.0,
+                            ),
+                            Text(
+                              'Taifa, Kristo Asafo',
+                              style: GoogleFonts.josefinSans(
+                                textStyle: TextStyle(
+                                  color: HexColor("#2c2c2c"),
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: screenHeight * 0.03,
+                        ),
+                        Container(
+                          width: screenWidth * 0.7,
+                          child: Text(
+                            'Plan your next adventure here',
                             style: GoogleFonts.josefinSans(
                               textStyle: TextStyle(
                                 color: HexColor("#2c2c2c"),
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.normal,
+                                fontSize: 26.0,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: screenHeight * 0.03,
-                      ),
-                      Container(
-                        width: screenWidth * 0.7,
-                        child: Text(
-                          'Plan your next adventure here',
-                          style: GoogleFonts.josefinSans(
-                            textStyle: TextStyle(
-                              color: HexColor("#2c2c2c"),
-                              fontSize: 26.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  CircleAvatar(
-                    maxRadius: 35.0,
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: screenHeight * 0.03,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: screenHeight * 0.08,
-                  width: screenWidth * 0.78,
-                  child: TextFormField(
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(
-                        Icons.location_pin,
-                        color: HexColor("#0b85ff"),
-                        size: 18.0,
-                      ),
-                      contentPadding: EdgeInsets.symmetric(
-                        vertical: MediaQuery.of(context).size.height * 0.01,
-                        horizontal: MediaQuery.of(context).size.width * 0.01,
-                      ),
-                      labelText: 'Where are you going next?',
-                      labelStyle: TextStyle(
-                        color: HexColor("#aeaeae"),
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'Roboto',
-                      ),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                          width: 0.01,
-                        ),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      // filled: true,
-                      // fillColor: HexColor("#eaeaea"),
+                      ],
                     ),
-                    // focusedBorder: OutlineInputBorder(
-                    //   borderSide: BorderSide(
-                    //     color: HexColor("#2c2c2c"),
-                    //   ),
-                    // ),
-                  ),
+                    CircleAvatar(
+                      maxRadius: 35.0,
+                    ),
+                  ],
                 ),
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: () {},
-                  color: HexColor('#0b85ff'),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: screenHeight * 0.01,
-            ),
-            Container(
-              height: screenHeight * 0.6,
-              width: screenWidth,
-              // color: Colors.red,
-              child: ListView(
-                padding: EdgeInsets.only(top: screenHeight * 0.01),
+              ),
+              SizedBox(
+                height: screenHeight * 0.03,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CategoryCards(
-                    'assets/hotels-img.jpg',
-                    'Hotels',
-                    '92',
-                    '#B54351',
-                  ),
                   SizedBox(
-                    height: screenHeight * 0.01,
+                    height: screenHeight * 0.08,
+                    width: screenWidth * 0.78,
+                    child: TextFormField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.location_pin,
+                          color: HexColor("#0b85ff"),
+                          size: 18.0,
+                        ),
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: MediaQuery.of(context).size.height * 0.01,
+                          horizontal: MediaQuery.of(context).size.width * 0.01,
+                        ),
+                        labelText: 'Where are you going next?',
+                        labelStyle: TextStyle(
+                          color: HexColor("#aeaeae"),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Roboto',
+                        ),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 0.01,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        // filled: true,
+                        // fillColor: HexColor("#eaeaea"),
+                      ),
+                      // focusedBorder: OutlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: HexColor("#2c2c2c"),
+                      //   ),
+                      // ),
+                    ),
                   ),
-                  CategoryCards(
-                    'assets/tickets.jpg',
-                    'Tickets',
-                    '5%',
-                    '#7E65CF',
-                  ),
-                  SizedBox(
-                    height: screenHeight * 0.01,
-                  ),
-                  CategoryCards(
-                    'assets/tour.jpg',
-                    'Tour Packages',
-                    '25',
-                    '#657FDC',
-                  ),
-                  SizedBox(
-                    height: screenHeight * 0.01,
-                  ),
-                  CategoryCards(
-                    'assets/travel-img.jpg',
-                    'Trippin Specials',
-                    '5%',
-                    '#875C66',
+                  IconButton(
+                    icon: Icon(Icons.menu),
+                    onPressed: () {},
+                    color: HexColor('#0b85ff'),
                   ),
                 ],
               ),
-            ),
-          ],
+              SizedBox(
+                height: screenHeight * 0.01,
+              ),
+              Container(
+                height: screenHeight * 0.6,
+                width: screenWidth,
+                // color: Colors.red,
+                child: ListView(
+                  padding: EdgeInsets.only(top: screenHeight * 0.01),
+                  children: [
+                    CategoryCards(
+                      'assets/hotels-img.jpg',
+                      'Hotels',
+                      '92',
+                      '#B54351',
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.01,
+                    ),
+                    CategoryCards(
+                      'assets/tickets.jpg',
+                      'Tickets',
+                      '5%',
+                      '#7E65CF',
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.01,
+                    ),
+                    CategoryCards(
+                      'assets/tour.jpg',
+                      'Tour Packages',
+                      '25',
+                      '#657FDC',
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.01,
+                    ),
+                    CategoryCards(
+                      'assets/travel-img.jpg',
+                      'Trippin Specials',
+                      '5%',
+                      '#875C66',
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
