@@ -4,6 +4,7 @@ import 'package:trippin_app/screens/homePageContainer.dart';
 import 'package:trippin_app/screens/login-signup/forgotPswd.dart';
 import 'package:trippin_app/screens/login-signup/login.dart';
 import 'package:trippin_app/screens/login-signup/signup.dart';
+import 'package:trippin_app/screens/startSliders/sliderContainer.dart';
 import 'package:trippin_app/screens/startSliders/sliderOne.dart';
 import 'package:trippin_app/screens/startSliders/sliderThree.dart';
 import 'package:trippin_app/screens/startSliders/sliderTwo.dart';
@@ -23,9 +24,10 @@ class TrippinApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SliderOne(),
-      initialRoute: '/sliderOne',
+      home: SliderContainer(),
+      initialRoute: '/sliderContainer',
       routes: {
+        '/sliderContainer': (context) => SliderContainer(),
         '/sliderOne': (context) => SliderOne(),
         '/sliderTwo': (context) => SliderTwo(),
         '/sliderThree': (context) => SliderThree(),
