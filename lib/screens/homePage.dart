@@ -17,82 +17,6 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       extendBody: true,
       backgroundColor: Colors.white,
-      bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(
-            40.0,
-          ),
-          topRight: Radius.circular(
-            40.0,
-          ),
-        ),
-        child: BottomNavigationBar(
-          elevation: 4.0,
-          backgroundColor: HexColor("#F4F4F4"),
-          items: [
-            BottomNavigationBarItem(
-              // backgroundColor: Colors.red,
-              icon: Icon(
-                Icons.home,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-              label: '',
-              // title: Text('Dashboard'),
-              activeIcon: Icon(
-                Icons.home,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-            ),
-            BottomNavigationBarItem(
-              // backgroundColor: Colors.red,
-              icon: Icon(
-                Icons.bookmark_outline,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-              label: '',
-              // title: Text('Dashboard'),
-              activeIcon: Icon(
-                Icons.bookmark_outline,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-            ),
-            BottomNavigationBarItem(
-              // backgroundColor: Colors.red,
-              icon: Icon(
-                Icons.notification_important_outlined,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-              label: '',
-              // title: Text('Dashboard'),
-              activeIcon: Icon(
-                Icons.notification_important_outlined,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-            ),
-            BottomNavigationBarItem(
-              // backgroundColor: Colors.red,
-              icon: Icon(
-                Icons.person,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-              label: '',
-              // title: Text('Dashboard'),
-              activeIcon: Icon(
-                Icons.person,
-                color: HexColor('#0b85ff'),
-                size: 26.0,
-              ),
-            ),
-          ],
-        ),
-      ),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: screenWidth * 0.04,
@@ -219,7 +143,7 @@ class _MainPageState extends State<MainPage> {
                 padding: EdgeInsets.only(top: screenHeight * 0.01),
                 children: [
                   CategoryCards(
-                    'https://lh3.googleusercontent.com/proxy/DtLNoDJm-i4MSo5J2q2sL8K6AG8iLLSfn0_SW_G0JK3K_og39UujOb_l-QVn6Jb2PJmVwcfaxyIH-a9jwQG5EtyhsQ',
+                    'assets/hotels-img.jpg',
                     'Hotels',
                     '92',
                     '#B54351',
@@ -228,7 +152,7 @@ class _MainPageState extends State<MainPage> {
                     height: screenHeight * 0.01,
                   ),
                   CategoryCards(
-                    'https://cdn.britannica.com/23/114723-050-09F42220/Boeing-747-runway-approach-lights-Amsterdam-Airport.jpg',
+                    'assets/tickets.jpg',
                     'Tickets',
                     '5%',
                     '#7E65CF',
@@ -237,7 +161,7 @@ class _MainPageState extends State<MainPage> {
                     height: screenHeight * 0.01,
                   ),
                   CategoryCards(
-                    'https://wallpaperaccess.com/full/5418579.jpg',
+                    'assets/tour.jpg',
                     'Tour Packages',
                     '25',
                     '#657FDC',
@@ -246,7 +170,7 @@ class _MainPageState extends State<MainPage> {
                     height: screenHeight * 0.01,
                   ),
                   CategoryCards(
-                    'https://wallpapercave.com/wp/wp6957266.jpg',
+                    'assets/travel-img.jpg',
                     'Trippin Specials',
                     '5%',
                     '#875C66',
@@ -290,7 +214,7 @@ class _CategoryCardsState extends State<CategoryCards> {
             image: DecorationImage(
               // image: NetworkImage(
               //     'https://lh3.googleusercontent.com/proxy/DtLNoDJm-i4MSo5J2q2sL8K6AG8iLLSfn0_SW_G0JK3K_og39UujOb_l-QVn6Jb2PJmVwcfaxyIH-a9jwQG5EtyhsQ'),
-              image: NetworkImage(widget.imagePath),
+              image: AssetImage(widget.imagePath),
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(10.0),
