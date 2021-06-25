@@ -45,6 +45,10 @@ class _SignUpState extends State<SignUp> {
               Center(
                 child: CircleAvatar(
                   maxRadius: 50.0,
+                  backgroundImage: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI60EP-H4qxuvyheHUjtgMB8z_mHnPx3unQ&usqp=CAU',
+                    scale: 1.0,
+                  ),
                 ),
               ),
               SizedBox(

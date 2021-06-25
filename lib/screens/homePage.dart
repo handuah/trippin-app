@@ -79,6 +79,10 @@ class _MainPageState extends State<MainPage> {
                     ),
                     CircleAvatar(
                       maxRadius: 35.0,
+                      backgroundImage: NetworkImage(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI60EP-H4qxuvyheHUjtgMB8z_mHnPx3unQ&usqp=CAU',
+                        scale: 1.0,
+                      ),
                     ),
                   ],
                 ),
