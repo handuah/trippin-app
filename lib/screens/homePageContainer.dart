@@ -11,6 +11,16 @@ class HomePageContainer extends StatefulWidget {
 }
 
 class _HomePageContainerState extends State<HomePageContainer> {
+  final PageController _pageController = PageController();
+  int _selectedIndex = 0;
+
+  void _onTappedItem(int value) {
+    setState(() {
+      _selectedIndex = value;
+    });
+    _pageController.jumpToPage(value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +37,15 @@ class _HomePageContainerState extends State<HomePageContainer> {
         ),
         child: BottomNavigationBar(
           elevation: 4.0,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _selectedIndex,
+          onTap: _onTappedItem,
           backgroundColor: HexColor("#F4F4F4"),
           items: [
             BottomNavigationBarItem(
               // backgroundColor: Colors.red,
               icon: Icon(
-                Icons.home,
+                Icons.home_outlined,
                 color: HexColor('#0b85ff'),
                 size: 26.0,
               ),
@@ -54,7 +67,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
               label: '',
               // title: Text('Dashboard'),
               activeIcon: Icon(
-                Icons.bookmark_outline,
+                Icons.bookmark,
                 color: HexColor('#0b85ff'),
                 size: 26.0,
               ),
@@ -69,7 +82,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
               label: '',
               // title: Text('Dashboard'),
               activeIcon: Icon(
-                Icons.notification_important_outlined,
+                Icons.notifications,
                 color: HexColor('#0b85ff'),
                 size: 26.0,
               ),
@@ -77,7 +90,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
             BottomNavigationBarItem(
               // backgroundColor: Colors.red,
               icon: Icon(
-                Icons.person,
+                Icons.person_outline,
                 color: HexColor('#0b85ff'),
                 size: 26.0,
               ),
@@ -93,12 +106,18 @@ class _HomePageContainerState extends State<HomePageContainer> {
         ),
       ),
       body: PageView(
+        controller: _pageController,
         children: [
           MainPage(),
           MainPage(),
           MainPage(),
           MainPage(),
         ],
+        onPageChanged: (page) {
+          setState(() {
+            _selectedIndex = page;
+          });
+        },
       ),
     );
   }
