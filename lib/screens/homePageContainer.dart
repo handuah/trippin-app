@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trippin_app/screens/homePage.dart';
+import 'package:trippin_app/screens/login-signup/notifications.dart';
 
 class HomePageContainer extends StatefulWidget {
   // const HomePageContainer({ Key? key }) : super(key: key);
@@ -110,7 +111,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
         children: [
           MainPage(),
           MainPage(),
-          MainPage(),
+          Notifications(),
           MainPage(),
         ],
         onPageChanged: (page) {
