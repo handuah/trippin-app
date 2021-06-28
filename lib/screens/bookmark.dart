@@ -150,56 +150,161 @@ class _BookmarkState extends State<Bookmark> {
                   ),
                   color: Colors.white,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: screenHeight * 0.06,
-                    ),
-                    DefaultTabController(
-                      length: 2,
-                      initialIndex: 0,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          TabBar(
-                            labelColor: HexColor('#ffffff'),
-                            unselectedLabelColor: Colors.black,
-                            indicator: BoxDecoration(
-                              shape: BoxShape.rectangle,
-                              color: HexColor('#0b85ff'),
-                            ),
-                            labelPadding: EdgeInsets.symmetric(
-                              vertical: screenHeight * 0.01,
-                            ),
-                            tabs: [
-                              Text(
-                                'Overview',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: TextStyle(
-                                    // color: HexColor("#ffffff"),
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: screenHeight * 0.06,
+                      ),
+                      DefaultTabController(
+                        length: 2,
+                        initialIndex: 0,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            TabBar(
+                              labelColor: HexColor('#ffffff'),
+                              unselectedLabelColor: Colors.black,
+                              indicator: BoxDecoration(
+                                shape: BoxShape.rectangle,
+                                color: HexColor('#0b85ff'),
                               ),
-                              Text(
-                                'Ratings & Reviews',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: TextStyle(
-                                    // color: HexColor("#ffffff"),
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
+                              labelPadding: EdgeInsets.symmetric(
+                                vertical: screenHeight * 0.01,
+                              ),
+                              tabs: [
+                                Text(
+                                  'Overview',
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: TextStyle(
+                                      // color: HexColor("#ffffff"),
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
+                                Text(
+                                  'Ratings & Reviews',
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: TextStyle(
+                                      // color: HexColor("#ffffff"),
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: screenHeight * 0.02,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.directions,
+                                color: HexColor('#0b85ff'),
+                                size: 30.0,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Directions & Distance',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: TextStyle(
+                                        // color: HexColor("#ffffff"),
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    '10hr 30mins',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: TextStyle(
+                                        // color: HexColor("#ffffff"),
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.label,
+                                color: HexColor('#0b85ff'),
+                                size: 30.0,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Bus Ticket Price',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: TextStyle(
+                                        // color: HexColor("#ffffff"),
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    'GHS 200.0',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: TextStyle(
+                                        // color: HexColor("#ffffff"),
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: screenHeight * 0.04,
+                      ),
+                      Container(
+                        height: screenHeight * 0.3,
+                        width: screenWidth,
+                        // color: Colors.red,
+                        child: Text(
+                          'I love everything about Sajek Valley. From the drive up the mountains, to the views, to the waking dawn seeing the sunrise. Upon your visit, be sure to catch the sunrise at dawn. That is when the clouds will be beneath you and the view of the valley below will be awe-inspiring.',
+                          style: GoogleFonts.josefinSans(
+                            textStyle: TextStyle(
+                              // color: HexColor("#ffffff"),
+                              height: 1.6,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
