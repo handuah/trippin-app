@@ -310,12 +310,24 @@ class _BookmarkState extends State<Bookmark> {
             ),
           ),
           Positioned(
-            top: screenHeight / 2.09,
-            left: screenWidth / 1.2,
-            child: Icon(
-              Icons.bookmark,
-              size: 40.0,
-              color: HexColor('0b85ff'),
+            top: screenHeight / 2.12,
+            left: screenWidth / 1.24,
+            child: Material(
+              elevation: 4.0,
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(100.0),
+              child: Container(
+                height: screenHeight * 0.06,
+                width: screenWidth * 0.12,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                ),
+                child: Icon(
+                  Icons.bookmark,
+                  size: 30.0,
+                  color: HexColor('0b85ff'),
+                ),
+              ),
             ),
           ),
         ],
