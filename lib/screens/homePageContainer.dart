@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:trippin_app/screens/bookmark.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trippin_app/screens/homePage.dart';
 import 'package:trippin_app/screens/login-signup/notifications.dart';
@@ -110,7 +111,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
         controller: _pageController,
         children: [
           MainPage(),
-          MainPage(),
+          Bookmark(),
           Notifications(),
           MainPage(),
         ],
