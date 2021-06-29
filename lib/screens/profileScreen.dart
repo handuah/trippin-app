@@ -343,7 +343,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Container(
                                         height: screenHeight * 0.04,
                                         width: screenWidth * 0.24,
-                                        color: Colors.pink,
+                                        // color: Colors.pink,
                                         child: Stack(
                                           alignment:
                                               AlignmentDirectional.center,
@@ -353,6 +353,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                               child: CircleAvatar(
                                                 maxRadius: 14.0,
                                                 backgroundColor: Colors.blue,
+                                                backgroundImage: NetworkImage(
+                                                    'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg'),
                                               ),
                                             ),
                                             Positioned(
@@ -360,6 +362,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                               child: CircleAvatar(
                                                 maxRadius: 14.0,
                                                 backgroundColor: Colors.yellow,
+                                                backgroundImage: NetworkImage(
+                                                  'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                                                ),
                                               ),
                                             ),
                                             Positioned(
@@ -367,6 +372,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                               child: CircleAvatar(
                                                 maxRadius: 14.0,
                                                 backgroundColor: Colors.purple,
+                                                backgroundImage: NetworkImage(
+                                                  'https://lh3.googleusercontent.com/E7Z8EvG2-1_KMXZ7K0EroBblqAG_0DjJiW8Vh6jyD6QOmlyOlOdMoT7MZDue9sfR2pxzWtOcGUqQGNfzWlSPe4adrLEXYStL-_gToV0R46ZMu0k=w960-rj-nu-e365',
+                                                ),
                                               ),
                                             ),
                                             Positioned(
@@ -375,6 +383,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 maxRadius: 14.0,
                                                 backgroundColor:
                                                     Colors.greenAccent,
+                                                backgroundImage: NetworkImage(
+                                                  'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
+                                                ),
                                               ),
                                             ),
                                             Positioned(
@@ -383,6 +394,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 maxRadius: 14.0,
                                                 backgroundColor:
                                                     Colors.yellowAccent,
+                                                backgroundImage: NetworkImage(
+                                                  'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
+                                                ),
                                               ),
                                             ),
                                           ],
