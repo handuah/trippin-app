@@ -4,6 +4,7 @@ import 'package:trippin_app/screens/bookmark.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trippin_app/screens/homePage.dart';
 import 'package:trippin_app/screens/login-signup/notifications.dart';
+import 'package:trippin_app/screens/profileScreen.dart';
 
 class HomePageContainer extends StatefulWidget {
   // const HomePageContainer({ Key? key }) : super(key: key);
@@ -113,7 +114,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
           MainPage(),
           Bookmark(),
           Notifications(),
-          MainPage(),
+          ProfileScreen(),
         ],
         onPageChanged: (page) {
           setState(() {
