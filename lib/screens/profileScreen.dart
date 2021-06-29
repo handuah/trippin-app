@@ -277,144 +277,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           top: screenHeight * 0.00,
                           bottom: screenHeight * 0.01),
                       children: [
-                        Container(
-                          width: screenWidth,
-                          height: screenHeight * 0.36,
-                          decoration: BoxDecoration(
-                              // color: Colors.green,
-                              ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: screenWidth,
-                                height: screenHeight * 0.24,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                      'https://www.top10about.com/wp-content/uploads/2020/01/Chittagong-Hill-Tracts.jpg',
-                                    ),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(20.0),
-                                ),
-                              ),
-                              SizedBox(
-                                height: screenHeight * 0.01,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Enjoyment Moment',
-                                        style: GoogleFonts.josefinSans(
-                                          textStyle: TextStyle(
-                                            color: HexColor("#2c2c2c"),
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Sajed, Bangladesh',
-                                        style: GoogleFonts.josefinSans(
-                                          textStyle: TextStyle(
-                                            color: HexColor("#2c2c2c"),
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        height: screenHeight * 0.04,
-                                        width: screenWidth * 0.24,
-                                        // color: Colors.pink,
-                                        child: Stack(
-                                          alignment:
-                                              AlignmentDirectional.center,
-                                          children: [
-                                            Positioned(
-                                              left: screenWidth * 0.01,
-                                              child: CircleAvatar(
-                                                maxRadius: 14.0,
-                                                backgroundColor: Colors.blue,
-                                                backgroundImage: NetworkImage(
-                                                    'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg'),
-                                              ),
-                                            ),
-                                            Positioned(
-                                              left: screenWidth * 0.05,
-                                              child: CircleAvatar(
-                                                maxRadius: 14.0,
-                                                backgroundColor: Colors.yellow,
-                                                backgroundImage: NetworkImage(
-                                                  'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
-                                                ),
-                                              ),
-                                            ),
-                                            Positioned(
-                                              left: screenWidth * 0.09,
-                                              child: CircleAvatar(
-                                                maxRadius: 14.0,
-                                                backgroundColor: Colors.purple,
-                                                backgroundImage: NetworkImage(
-                                                  'https://lh3.googleusercontent.com/E7Z8EvG2-1_KMXZ7K0EroBblqAG_0DjJiW8Vh6jyD6QOmlyOlOdMoT7MZDue9sfR2pxzWtOcGUqQGNfzWlSPe4adrLEXYStL-_gToV0R46ZMu0k=w960-rj-nu-e365',
-                                                ),
-                                              ),
-                                            ),
-                                            Positioned(
-                                              left: screenWidth * 0.13,
-                                              child: CircleAvatar(
-                                                maxRadius: 14.0,
-                                                backgroundColor:
-                                                    Colors.greenAccent,
-                                                backgroundImage: NetworkImage(
-                                                  'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
-                                                ),
-                                              ),
-                                            ),
-                                            Positioned(
-                                              left: screenWidth * 0.17,
-                                              child: CircleAvatar(
-                                                maxRadius: 14.0,
-                                                backgroundColor:
-                                                    Colors.yellowAccent,
-                                                backgroundImage: NetworkImage(
-                                                  'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      IconButton(
-                                        icon: Icon(
-                                          Icons.more_vert_rounded,
-                                          color: HexColor('#eaeaea'),
-                                        ),
-                                        onPressed: () {},
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                        PostCards(
+                          'https://www.top10about.com/wp-content/uploads/2020/01/Chittagong-Hill-Tracts.jpg',
+                          'Enjoyment Moment',
+                          'Sajed Bangladesh',
+                          'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg',
+                          'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                          'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
+                          'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
+                          'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
                         ),
                       ],
                     ),
@@ -424,6 +295,182 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+// Post Cards are Here...
+class PostCards extends StatefulWidget {
+  final String postImagePath;
+  final String postTitle;
+  final String postLocation;
+  final String url1;
+  final String url2;
+  final String url3;
+  final String url4;
+  final String url5;
+  // const PostCards({ Key? key }) : super(key: key);
+
+  const PostCards(
+    this.postImagePath,
+    this.postTitle,
+    this.postLocation,
+    this.url1,
+    this.url2,
+    this.url3,
+    this.url4,
+    this.url5,
+  );
+
+  @override
+  _PostCardsState createState() => _PostCardsState();
+}
+
+class _PostCardsState extends State<PostCards> {
+  @override
+  Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Container(
+      width: screenWidth,
+      height: screenHeight * 0.36,
+      decoration: BoxDecoration(
+          // color: Colors.green,
+          ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: screenWidth,
+            height: screenHeight * 0.24,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(
+                  widget.postImagePath,
+                  // 'https://www.top10about.com/wp-content/uploads/2020/01/Chittagong-Hill-Tracts.jpg',
+                ),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+          ),
+          SizedBox(
+            height: screenHeight * 0.01,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.postTitle,
+                    // 'Enjoyment Moment',
+                    style: GoogleFonts.josefinSans(
+                      textStyle: TextStyle(
+                        color: HexColor("#2c2c2c"),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    widget.postLocation,
+                    // 'Sajed, Bangladesh',
+                    style: GoogleFonts.josefinSans(
+                      textStyle: TextStyle(
+                        color: HexColor("#2c2c2c"),
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    height: screenHeight * 0.04,
+                    width: screenWidth * 0.24,
+                    // color: Colors.pink,
+                    child: Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        Positioned(
+                          left: screenWidth * 0.01,
+                          child: CircleAvatar(
+                            maxRadius: 14.0,
+                            backgroundColor: Colors.blue,
+                            backgroundImage: NetworkImage(
+                              widget.url1,
+                            ),
+                            // 'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg'),
+                          ),
+                        ),
+                        Positioned(
+                          left: screenWidth * 0.05,
+                          child: CircleAvatar(
+                            maxRadius: 14.0,
+                            backgroundColor: Colors.yellow,
+                            backgroundImage: NetworkImage(
+                              widget.url2,
+                              // 'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: screenWidth * 0.09,
+                          child: CircleAvatar(
+                            maxRadius: 14.0,
+                            backgroundColor: Colors.purple,
+                            backgroundImage: NetworkImage(
+                              widget.url3,
+                              // 'https://lh3.googleusercontent.com/E7Z8EvG2-1_KMXZ7K0EroBblqAG_0DjJiW8Vh6jyD6QOmlyOlOdMoT7MZDue9sfR2pxzWtOcGUqQGNfzWlSPe4adrLEXYStL-_gToV0R46ZMu0k=w960-rj-nu-e365',
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: screenWidth * 0.13,
+                          child: CircleAvatar(
+                            maxRadius: 14.0,
+                            backgroundColor: Colors.greenAccent,
+                            backgroundImage: NetworkImage(widget.url4
+                                // 'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
+                                ),
+                          ),
+                        ),
+                        Positioned(
+                          left: screenWidth * 0.17,
+                          child: CircleAvatar(
+                            maxRadius: 14.0,
+                            backgroundColor: Colors.yellowAccent,
+                            backgroundImage: NetworkImage(
+                              widget.url5,
+                              // 'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(
+                      Icons.more_vert_rounded,
+                      color: HexColor('#eaeaea'),
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
