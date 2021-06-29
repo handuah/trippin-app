@@ -265,7 +265,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     height: screenHeight * 0.02,
                   ),
                   Container(
-                    height: screenHeight * 0.35,
+                    height: screenHeight * 0.40,
                     width: screenWidth,
                     decoration: BoxDecoration(
                       // color: Colors.red,
@@ -301,6 +301,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           'https://www.tripsavvy.com/thmb/K0xyjXQVw7vY1vaNwCDOpfuTvO8=/2107x1423/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-639553537-5926cb4e5f9b58595039548e.jpg',
                           'Cape Coast Castle',
                           'Cape Coast',
+                          'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg',
+                          'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                          'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
+                          'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
+                          'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                        ),
+                        PostCards(
+                          'https://www.flyingfourchette.com/wp-content/uploads/2013/11/Mole-Entrance.jpg',
+                          'Mole National Park',
+                          'Northern Region',
                           'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg',
                           'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
                           'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
@@ -398,6 +408,9 @@ class _PostCardsState extends State<PostCards> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: screenHeight * 0.01,
+                  ),
                   Text(
                     widget.postLocation,
                     // 'Sajed, Bangladesh',
@@ -405,7 +418,7 @@ class _PostCardsState extends State<PostCards> {
                       textStyle: TextStyle(
                         color: HexColor("#2c2c2c"),
                         fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.normal,
                       ),
                     ),
                   ),
