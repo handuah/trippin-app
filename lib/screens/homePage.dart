@@ -149,11 +149,16 @@ class _MainPageState extends State<MainPage> {
                 child: ListView(
                   padding: EdgeInsets.only(top: screenHeight * 0.01),
                   children: [
-                    CategoryCards(
-                      'assets/hotels-img.jpg',
-                      'Hotels',
-                      '92',
-                      '#B54351',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/searchHotels');
+                      },
+                      child: CategoryCards(
+                        'assets/hotels-img.jpg',
+                        'Hotels',
+                        '92',
+                        '#B54351',
+                      ),
                     ),
                     SizedBox(
                       height: screenHeight * 0.01,
