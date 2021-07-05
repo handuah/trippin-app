@@ -135,7 +135,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                       ),
                                       child: Padding(
                                         padding: EdgeInsets.symmetric(
-                                          vertical: screenHeight * 0.04,
+                                          vertical: screenHeight * 0.03,
                                           horizontal: screenWidth * 0.02,
                                         ),
                                         child: Column(
@@ -243,7 +243,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'City',
+                                                      'Arrival',
                                                       style: GoogleFonts
                                                           .josefinSans(
                                                         textStyle: TextStyle(
@@ -293,7 +293,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'City',
+                                                      'Departure',
                                                       style: GoogleFonts
                                                           .josefinSans(
                                                         textStyle: TextStyle(
@@ -374,7 +374,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'City',
+                                                      'Star',
                                                       style: GoogleFonts
                                                           .josefinSans(
                                                         textStyle: TextStyle(
@@ -424,7 +424,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'City',
+                                                      'Room',
                                                       style: GoogleFonts
                                                           .josefinSans(
                                                         textStyle: TextStyle(
@@ -468,6 +468,39 @@ class _HotelSearchState extends State<HotelSearch> {
                                                   ],
                                                 ),
                                               ],
+                                            ),
+                                            SizedBox(
+                                              height: screenHeight * 0.015,
+                                            ),
+                                            SizedBox(
+                                              height: screenHeight * 0.07,
+                                              width: screenWidth,
+                                              child: TextButton(
+                                                onPressed: () {},
+                                                child: Text(
+                                                  'SEARCH',
+                                                  style:
+                                                      GoogleFonts.josefinSans(
+                                                    textStyle: TextStyle(
+                                                      color:
+                                                          HexColor("#ffffff"),
+                                                      fontSize: 18.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      letterSpacing: 1.2,
+                                                    ),
+                                                  ),
+                                                ),
+                                                style: TextButton.styleFrom(
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10.0),
+                                                  ),
+                                                  backgroundColor:
+                                                      HexColor("0b85ff"),
+                                                ),
+                                              ),
                                             ),
                                           ],
                                         ),
