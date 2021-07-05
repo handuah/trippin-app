@@ -530,7 +530,66 @@ class _HotelSearchState extends State<HotelSearch> {
                             ),
                           ],
                         ),
-                        Text('hERE2'),
+                        ListView(
+                          scrollDirection: Axis.vertical,
+                          padding: EdgeInsets.symmetric(
+                            vertical: screenHeight * 0.02,
+                            horizontal: screenWidth * 0.03,
+                          ),
+                          children: [
+                            HotelCards(
+                              'https://2.bp.blogspot.com/-iKHBpDMNrAI/W6jQg6s6CqI/AAAAAAAAKXg/vytw0HOa-gYDYHjdrRMNbxvIGhAgozm_wCLcBGAs/s1600/RP-Kempinski-Photo.jpg',
+                              'Kempinski Hotel',
+                              "Ghana's Premier Hotel",
+                              '2.0km away from You',
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                            HotelCards(
+                              'https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/38/61/3861746_v3.jpeg',
+                              'Airport View Hotel',
+                              "Luxury and Pride",
+                              '5.0km away from You',
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                            HotelCards(
+                              'https://lh3.googleusercontent.com/proxy/bB1TZblop8LAgbqrZjddMvnsu2dlaNYvRqUTfyl0qPqmFufLdj7ga8PF4TyJIQsbn7uPtTTZ-KXQU31DDdJYIhFv4I0EtZ8W7hTukZ-_EVYRPxy2rZ431lyoK-jADmLH',
+                              'Oak Plaza Hotel',
+                              "The Pride of Spintex",
+                              '15.0km away from You',
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                            HotelCards(
+                              'https://cdn.ghanaweb.com/hotels/161900713e16f3332691c163c0e9f614bth.jpeg',
+                              'Novotel Hotel',
+                              "Right in the middle of Accra",
+                              '1.0km away from You',
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                            HotelCards(
+                              'https://res.cloudinary.com/estate-intel/images/f_auto,q_auto/w_609,h_352/v1620386034/wp_assets/Villagio-Vista/Villagio-Vista.jpg',
+                              'Villagio Residences',
+                              "Luxury and Class",
+                              '25.0km away from You',
+                            ),
+                            SizedBox(
+                              height: screenHeight * 0.02,
+                            ),
+                            HotelCards(
+                              'https://viewghana.com/wp-content/uploads/2021/02/Safari_Valley_Resort_Abrui-1-1024x669.jpg',
+                              'Safari Valley Resort',
+                              "Luxury and calm",
+                              '50.0km away from You',
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -540,6 +599,205 @@ class _HotelSearchState extends State<HotelSearch> {
           ],
         ),
       ),
+    );
+  }
+}
+
+// HOTEL CARDS
+class HotelCards extends StatefulWidget {
+  // const HotelCards({ Key? key }) : super(key: key);
+  final String hotelImgPath;
+  final String hotelName;
+  final String hotelDesc;
+  final String hotelDistance;
+
+  const HotelCards(
+    this.hotelImgPath,
+    this.hotelName,
+    this.hotelDesc,
+    this.hotelDistance,
+  );
+
+  @override
+  _HotelCardsState createState() => _HotelCardsState();
+}
+
+class _HotelCardsState extends State<HotelCards> {
+  @override
+  Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          height: screenHeight * 0.3,
+          width: screenWidth * 0.4,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Colors.red,
+            image: DecorationImage(
+              image: NetworkImage(
+                widget.hotelImgPath,
+                // 'https://2.bp.blogspot.com/-iKHBpDMNrAI/W6jQg6s6CqI/AAAAAAAAKXg/vytw0HOa-gYDYHjdrRMNbxvIGhAgozm_wCLcBGAs/s1600/RP-Kempinski-Photo.jpg',
+              ),
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+        ),
+        SizedBox(
+          width: screenWidth * 0.06,
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              widget.hotelName,
+              // 'Kempinski Hotel',
+              style: GoogleFonts.josefinSans(
+                textStyle: TextStyle(
+                  // color: HexColor("#ffffff"),
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight * 0.02,
+            ),
+            Text(
+              widget.hotelDesc,
+              // 'The Best Hotel in Ghana',
+              style: GoogleFonts.josefinSans(
+                textStyle: TextStyle(
+                  // color: HexColor("#ffffff"),
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight * 0.02,
+            ),
+            Text(
+              widget.hotelDistance,
+              // '2.0 km away from You',
+              style: GoogleFonts.josefinSans(
+                textStyle: TextStyle(
+                  // color: HexColor("#ffffff"),
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: screenHeight * 0.02,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.star,
+                  color: HexColor('#0b85ff'),
+                ),
+                Icon(
+                  Icons.star,
+                  color: HexColor('#0b85ff'),
+                ),
+                Icon(
+                  Icons.star,
+                  color: HexColor('#0b85ff'),
+                ),
+                Icon(
+                  Icons.star,
+                  color: HexColor('#0b85ff'),
+                ),
+                Icon(
+                  Icons.star_half,
+                  color: HexColor('#0b85ff'),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: screenHeight * 0.03,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: screenHeight * 0.04,
+                  width: screenWidth * 0.24,
+                  // color: Colors.pink,
+                  child: Stack(
+                    alignment: AlignmentDirectional.center,
+                    children: [
+                      Positioned(
+                        left: screenWidth * 0.01,
+                        child: CircleAvatar(
+                          maxRadius: 14.0,
+                          backgroundColor: Colors.blue,
+                          backgroundImage: NetworkImage(
+                              // widget.url1,
+                              // ),
+                              'https://i1.sndcdn.com/artworks-CNtsO4Dkz1iV34NA-F4m70A-t500x500.jpg'),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenWidth * 0.05,
+                        child: CircleAvatar(
+                          maxRadius: 14.0,
+                          backgroundColor: Colors.yellow,
+                          backgroundImage: NetworkImage(
+                            // widget.url2,
+                            'https://lh3.googleusercontent.com/08zUitpTR8-TDMyrNujzkiPm6Kxk90cWKI_0QTcZgHWZj36PHmxCuJ0PkDZIhqq2_joSihn3h0tDCEkk6LmXexBcBOQC6nA499DWwqFnB57LmCQ=w1200-h630-rj-pp-e365',
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenWidth * 0.09,
+                        child: CircleAvatar(
+                          maxRadius: 14.0,
+                          backgroundColor: Colors.purple,
+                          backgroundImage: NetworkImage(
+                            // widget.url3,
+                            'https://lh3.googleusercontent.com/E7Z8EvG2-1_KMXZ7K0EroBblqAG_0DjJiW8Vh6jyD6QOmlyOlOdMoT7MZDue9sfR2pxzWtOcGUqQGNfzWlSPe4adrLEXYStL-_gToV0R46ZMu0k=w960-rj-nu-e365',
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenWidth * 0.13,
+                        child: CircleAvatar(
+                          maxRadius: 14.0,
+                          backgroundColor: Colors.greenAccent,
+                          backgroundImage: NetworkImage(
+                            // widget.url4,
+                            'https://i.pinimg.com/236x/47/73/5a/47735a2350c794f359d0163c37a219e2.jpg',
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenWidth * 0.17,
+                        child: CircleAvatar(
+                          maxRadius: 14.0,
+                          backgroundColor: Colors.yellowAccent,
+                          backgroundImage: NetworkImage(
+                            // widget.url5,
+                            'https://v-phinf.pstatic.net//20210223_111/16140402498359qyQ6_JPEG/image.jpg?type=w1000',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
