@@ -31,8 +31,13 @@ class _HotelSearchState extends State<HotelSearch> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.arrow_back,
+                  IconButton(
+                    icon: Icon(
+                      Icons.arrow_back,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   SizedBox(
                     width: screenWidth * 0.2,
@@ -111,7 +116,7 @@ class _HotelSearchState extends State<HotelSearch> {
                                       color: Colors.red,
                                       image: DecorationImage(
                                         image: NetworkImage(
-                                          'https://usercontent.one/wp/www.grassroottours.com/wp-content/uploads/2019/12/PHOTO-2019-11-26-16-37-06.jpg',
+                                          'https://aquasafariresort.com/wp-content/uploads/2020/02/1-DJI_0417-scaled.jpg',
                                         ),
                                         fit: BoxFit.cover,
                                       ),
@@ -556,10 +561,10 @@ class _HotelSearchState extends State<HotelSearch> {
                               height: screenHeight * 0.02,
                             ),
                             HotelCards(
-                              'https://lh3.googleusercontent.com/proxy/bB1TZblop8LAgbqrZjddMvnsu2dlaNYvRqUTfyl0qPqmFufLdj7ga8PF4TyJIQsbn7uPtTTZ-KXQU31DDdJYIhFv4I0EtZ8W7hTukZ-_EVYRPxy2rZ431lyoK-jADmLH',
-                              'Oak Plaza Hotel',
-                              "The Pride of Spintex",
-                              '15.0km away from You',
+                              'https://aquasafariresort.com/wp-content/uploads/2019/05/13.jpg',
+                              'Aqua Safari Resort',
+                              "The Pride of Volta",
+                              '150.0km away from You',
                             ),
                             SizedBox(
                               height: screenHeight * 0.02,
