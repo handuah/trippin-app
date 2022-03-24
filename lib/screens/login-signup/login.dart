@@ -87,7 +87,9 @@ class _LoginState extends State<Login> {
                             height: screenHeight * 0.07,
                             width: screenWidth * 0.2,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/welcomeSlider');
+                              },
                               child: Text(
                                 'Ok',
                                 style: GoogleFonts.josefinSans(
